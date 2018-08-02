@@ -39,7 +39,7 @@ public class Application {
     public String addFeedback(@RequestBody Feedback feedback) {
         if(feedback != null){
             this.feedbacks.add(feedback);
-            return "OK"
+            return "OK";
         }
         return "NOT OK";
     }
