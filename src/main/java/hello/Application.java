@@ -12,6 +12,14 @@ import java.util.ArrayList;
 public class Application {
     
     private List<Feedback> feedbacks = new ArrayList<>();
+    
+    {
+        Feedback f1 = new Feedback();
+        f1.setComments("My First Comment");
+        f1.setName("Badri");
+        f1.setExperience("Good");
+        feedbacks.add(f1);
+    }
    
     @RequestMapping("/")
     public String home() {
