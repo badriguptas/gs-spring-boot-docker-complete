@@ -36,7 +36,7 @@ public class Application {
         return this.feedbacks;
     }
     
-    @RequestMapping("/feeback", method = RequestMethod.POST)
+    @RequestMapping(value="/feeback", method=RequestMethod.POST)
     public String addFeedback(@RequestBody Feedback feedback) {
         if(feedback != null){
             this.feedbacks.add(feedback);
