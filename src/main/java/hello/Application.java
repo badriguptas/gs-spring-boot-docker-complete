@@ -35,8 +35,12 @@ public class Application {
         return this.feedbacks;
     }
     
-    @RequestMapping("/feeback")
-    public String addFeedback() {
-        return "";
+    @RequestMapping("/feeback", method = RequestMethod.POST)
+    public String addFeedback(@RequestBody Feedback feedback) {
+        if(feedback != null){
+            this.feedbacks.add(feedback);
+            return "OK"
+        }
+        return "NOT OK";
     }
 }
